@@ -1,0 +1,42 @@
+.container-singular-view {
+    padding-left: toVw(136);
+    padding-right: toVw(136);
+
+    @include maxw($mobileBreakpoint) {
+        padding-left: toVwMobile(36);
+        padding-right: toVwMobile(36);
+    }
+
+
+    .main-image-wrap {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    figure.main-image {
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        max-height: 994px;
+        transform: scale(1.1);
+
+
+        picture {
+            display: block;
+            width: 100%;
+
+            img {
+                display: block;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+    }
+
+    .back-to-all-link {
+        margin-top: 120px;
+    }
+}

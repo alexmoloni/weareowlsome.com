@@ -1,0 +1,15 @@
+.main-header.with-language-switcher {
+    .dropdown.language-switcher {
+        margin-left: 40px;
+
+        @include maxw($mobileBreakpoint) {
+            margin-left: 25px;
+        }
+    }
+
+    .hamburger {
+        @include maxw($mobileBreakpoint) {
+            margin-left: auto;
+        }
+    }
+}

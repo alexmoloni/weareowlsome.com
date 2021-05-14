@@ -1,0 +1,16 @@
+.owl-icon {
+    width: 80px;
+    height: 80px;
+
+    @include maxw($mobileBreakpoint) {
+        width: 60px;
+        height: 60px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+}

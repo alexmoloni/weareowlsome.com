@@ -1,0 +1,59 @@
+@include maxw($mobileBreakpoint) {
+    header.main-header {
+
+        .main-navigation {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            min-height: 100vh;
+            transform: translateX(100%);
+            pointer-events: none;
+            padding: 43px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            border: solid 1px #e7ebed;
+            opacity: 0;
+            background-color: #CCA19C;
+
+            @media (max-height: 500px) {
+                padding: 20px;
+            }
+
+
+        }
+    }
+
+    header.main-header.menu-from-left {
+        .main-navigation {
+            left: 0;
+            right: auto;
+            transform: translateX(-100%);
+        }
+    }
+
+    header.main-header.mobile-menu-full-width {
+        .main-navigation {
+            padding-right: 20px;
+            max-width: none;
+        }
+    }
+
+    /*styles for when header becomes sticky*/
+    header.main-header.sticky {
+
+        .main-navigation {
+            a.btn-main {
+                display: none;
+            }
+        }
+    }
+
+    body.js-loaded {
+        .main-navigation {
+            opacity: 1;
+        }
+    }
+}

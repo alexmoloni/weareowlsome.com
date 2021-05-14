@@ -1,0 +1,69 @@
+html {
+    font-family: $textFont;
+    font-size: $rootFontSize;
+    color: $color1;
+    line-height: 1.2;
+    font-weig1ht: 500;
+
+    @include maxw($mobileBreakpoint) {
+        font-size: $rootFontSizeMobile;
+    }
+}
+
+//in order for GSAP to work correctly
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html * {
+    box-sizing: border-box;
+
+}
+
+input, label, select, button, textarea {
+    font-family: $textFont;
+    line-height: 1.2;
+}
+
+.screen-reader-text {
+    font-size: 0;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    display: none;
+}
+
+strong {
+    font-weight: bold;
+}
+
+main.main {
+    //removed on desktop because of section-image that needs to overflow
+    @include maxw($mobileBreakpoint) {
+        overflow: hidden;
+    }
+}
+
+
+.mobile-only {
+    @include minw($mobileBreakpoint) {
+        display: none !important;
+    }
+}
+
+.desktop-only {
+    @include maxw($mobileBreakpoint) {
+        display: none !important;
+    }
+}
+
+.with-shadow {
+    box-shadow: 0px 7px 10.7px 0.3px rgba(0, 0, 0, 0.21);
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}

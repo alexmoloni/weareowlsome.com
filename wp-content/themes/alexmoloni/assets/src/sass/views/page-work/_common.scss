@@ -1,0 +1,27 @@
+body.page-template-page_work {
+    .header-main-footer-wrap {
+        padding-top: toVw(97);
+
+        @include maxw($mobileBreakpoint) {
+            padding-top: 40px;
+        }
+    }
+
+
+
+    main.main {
+        padding-top: 90px;
+
+        @include maxw($mobileBreakpoint) {
+            padding-top: 45px;
+        }
+    }
+
+    .footer-section {
+        padding-top: 50px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+}

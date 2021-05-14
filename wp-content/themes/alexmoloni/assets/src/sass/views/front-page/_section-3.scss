@@ -1,0 +1,126 @@
+body.home {
+    .section-3 {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        .project-row {
+            text-decoration: none;
+            height: 50vw;
+            display: flex;
+
+            > * {
+                flex: 0 0 50%;
+                width: 50%;
+            }
+
+            .col-preview-image {
+                overflow: hidden;
+
+                figure {
+                    height: 100%;
+                    width: 100%;
+                    transition: all 1s;
+
+
+                    picture {
+                        display: block;
+                        height: 100%;
+                        width: 100%;
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                            object-position: 50% 50%;
+                            display: block;
+                        }
+                    }
+                }
+
+                &:hover {
+                    figure {
+                        transform: scale(1.15);
+                    }
+                }
+
+            }
+
+            .col-text {
+                padding: 80px;
+                position: relative;
+
+                .slogan {
+                    font-weight: 300;
+                    font-size: toVw(100);
+                    margin-bottom: 10px;
+                    text-transform: uppercase;
+                    display: block;
+                    line-height: 1.2;
+                }
+
+                .client {
+                    font-family: $font2;
+                    font-weight: 300;
+                    letter-spacing: 0.11px;
+                    font-size: toVw(107);
+                    display: block;
+                }
+
+                .arrow {
+                    position: absolute;
+                    right: toVw(170);
+                    bottom: toVw(130);
+                    width: toVw(110);
+                    height: toVw(66);
+                    @include with-css-background();
+                    background-image: url('/images/svg/arrow-project.svg');
+
+                }
+
+                &:hover {
+                    .arrow {
+                        @include bounceLeftArrow();
+                    }
+                }
+
+            }
+        }
+
+
+        .project-row:nth-child(even) {
+            .col-preview-image {
+                order: 2;
+            }
+        }
+
+        .project-row:nth-child(1) {
+            .col-text {
+                background-color: #E3BFAD;
+            }
+        }
+
+        .project-row:nth-child(2) {
+            .col-text {
+                background-color: #CCA19C;
+            }
+        }
+
+        .project-row:nth-child(3) {
+            .col-text {
+                background-color: #D6D9D2;
+            }
+        }
+
+        .link {
+            text-align: center;
+            text-decoration: none;
+            font-size: toVw(39);
+            text-transform: uppercase;
+            margin-top: toVw(142);
+            margin-bottom: toVw(142);
+            display: block;
+        }
+
+
+    }
+}

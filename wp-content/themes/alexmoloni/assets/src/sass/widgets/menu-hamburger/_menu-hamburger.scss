@@ -1,0 +1,61 @@
+.hamburger {
+
+    @include maxw($mobileBreakpoint) {
+        padding: 0;
+        font: inherit;
+        overflow: visible;
+        cursor: pointer;
+        transition-timing-function: linear;
+        transition-duration: .15s;
+        transition-property: opacity, filter;
+        text-transform: none;
+        color: inherit;
+        border: 0;
+        background-color: transparent;
+        margin: 0;
+    }
+
+    .hamburger-box {
+
+        position: relative;
+        display: inline-block;
+        width: $hamburger-width;
+        height: $hamburger-height;
+    }
+
+    .hamburger-inner {
+        display: block;
+        margin-top: -2px
+    }
+
+    .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+        background-color: $hamburger_color !important;
+    }
+
+}
+
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+    position: absolute;
+    width: 100%;
+    height: $lines_height;
+    transition-timing-function: ease;
+    transition-duration: .15s;
+    transition-property: transform;
+    border-radius: 4px;
+    background-color: $hamburger_color !important;
+}
+
+.hamburger-inner:after, .hamburger-inner:before {
+    display: block;
+    content: ""
+}
+
+.hamburger-inner:before {
+    top: -10px
+}
+
+.hamburger-inner:after {
+    bottom: -10px
+}
+
+

@@ -1,0 +1,82 @@
+.project-item {
+    $br1: 500px;
+    position: relative;
+
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    .col-preview-image {
+        height: 100%;
+        overflow: hidden;
+        @include basicEasing();
+        @include clipPathBeforeHover();
+
+        @include maxw($br1) {
+            height: 400px;
+        }
+
+
+        figure {
+            height: 100%;
+            @include basicEasing();
+
+
+
+
+            picture {
+                height: 100%;
+                display: block;
+            }
+
+            img {
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+
+                @include maxw($br1) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .col-text {
+        position: absolute;
+        top: 10%;
+        left: 0;
+        opacity: 0;
+        @include basicTransitionLong();
+        max-width: 250px;
+        font-size: 60px;
+        text-align: left;
+
+        @include maxw($mobileBreakpoint) {
+            font-size: 30px;
+            position: static;
+            opacity: 1;
+            margin-top: 30px;
+        }
+
+        @include maxw($br1) {
+            font-size: 22px;
+            max-width: 200px;
+        }
+    }
+}
+
+.project-item:hover {
+
+    .col-preview-image {
+        @include clipPathOnHover();
+
+        figure {
+            transform: scale(1.05);
+        }
+    }
+
+    .col-text {
+        opacity: 1;
+    }
+}

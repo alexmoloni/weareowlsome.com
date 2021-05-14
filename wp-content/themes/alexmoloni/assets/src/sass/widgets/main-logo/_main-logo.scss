@@ -1,0 +1,14 @@
+.main-logo {
+    .logo {
+        @include with-css-background();
+        background-position: 0 50%;
+        display: block;
+        width: toVw(252);
+        height: toVw(112);
+
+        @include maxw($mobileBreakpoint) {
+            width: toVwMobile(129);
+            height: toVwMobile(57);
+        }
+    }
+}

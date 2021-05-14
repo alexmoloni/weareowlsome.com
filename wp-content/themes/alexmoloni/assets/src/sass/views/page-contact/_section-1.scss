@@ -1,0 +1,50 @@
+body.page-template-page_contact {
+    .section-1 {
+        background-color: #EDD6C4;
+        padding-top: toVw(342);
+        padding-bottom: toVw(124);
+
+        @include maxw($mobileBreakpoint) {
+            padding-top: toVwMobile(150);
+            padding-bottom: toVw(124, 8);
+        }
+
+        > .container {
+            &:hover {
+                .arrow-down {
+                    @include bounceDownArrow();
+                    animation-iteration-count: infinite;
+                    animation-delay: 0s;
+                }
+            }
+        }
+
+        .heading-1 {
+            margin-bottom: toVw(80);
+            max-width: toVw(1092);
+            margin-left: auto;
+            margin-right: auto;
+
+            @include maxw($mobileBreakpoint) {
+                margin-bottom: toVw(80, 2);
+                font-size: toVwMobile(50);
+                max-width: none;
+            }
+
+
+
+        }
+
+        .arrow-down {
+            text-align: center;
+
+
+
+            img {
+                display: inline-block;
+                width: toVw(67);
+                height: toVw(109);
+            }
+        }
+    }
+}

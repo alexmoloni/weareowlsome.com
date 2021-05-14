@@ -1,0 +1,29 @@
+.alexmoloni-grid-1 {
+	$br1: 500px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	@include maxw($br1) {
+		display: block;
+	}
+
+	 > * {
+		 flex: 0 0 calc(40vw - 15px);
+		 width: calc(40vw - 15px);
+		 height: calc(40vw - 15px);
+		 margin-bottom: 40px;
+		 margin-left: 20px;
+		 margin-right: 20px;
+
+		 @include maxw($br1) {
+			 width: 80vw;
+			 height: auto;
+			 margin-left: auto;
+			 margin-right: auto;
+			 display: block;
+			 text-align: center;
+		 }
+
+	 }
+}

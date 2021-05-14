@@ -1,0 +1,44 @@
+.main-header.has-topbar {
+    padding-top: 0;
+
+    .topbar {
+        border-bottom: 1px solid $colorGrey2;
+        font-size: 12px;
+        padding: 12px;
+
+        .topbar-inner {
+            display: flex;
+            height: 100%;
+            justify-content: flex-start;
+            align-items: center;
+
+            @include maxw($mobileBreakpoint) {
+                justify-content: center;
+            }
+
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .phone-box {
+            padding-right: 30px;
+            border-right: 1px solid $colorGrey2;
+            line-height: 14px;
+        }
+
+        .email-box {
+            padding-left: 30px;
+            line-height: 14px;
+        }
+
+    }
+
+    .header-inner-wrap {
+        margin-top: 15px;
+    }
+
+
+}

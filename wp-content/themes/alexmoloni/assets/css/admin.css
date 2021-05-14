@@ -1,0 +1,11 @@
+body.wp-admin #wpml-media-welcome-notice {
+    display: none;
+}
+
+.acf-fields > .acf-field-message {
+    font-size: 40px;
+}
+
+.acf-fields > .acf-field-group > .acf-label {
+    font-size: 40px;
+}

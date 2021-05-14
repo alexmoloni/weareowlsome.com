@@ -1,0 +1,30 @@
+.fixed-socials {
+    position: fixed;
+    display: flex;
+    right: 0;
+    top: 50%;
+    transform: rotate(90deg) translateY(50%) translateX(50%);
+    z-index: 50;
+    transform-origin: 100% 50%;
+    opacity: 0;
+    @include basicTransitionLong();
+
+    .social {
+        margin-right: 50px;
+        text-transform: uppercase;
+        font-size: toVw(23);
+
+        @include maxw(1500px) {
+            font-size: 23px;
+        }
+
+        @include maxw($mobileBreakpoint) {
+            font-size: 16px;
+        }
+    }
+}
+
+.fixed-socials.visible {
+    opacity: 1;
+    transform: rotate(90deg) translateY(120%) translateX(50%);
+}

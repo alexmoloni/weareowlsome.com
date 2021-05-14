@@ -1,0 +1,35 @@
+.main-header {
+    background-color: transparent;
+
+    > .container {
+        @include minw($mobileBreakpoint) {
+            width: 100%;
+            padding-left: toVw(136);
+            padding-right: toVw(136);
+            max-width: none;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        @include maxw(1600px) {
+            margin-right: 0px;
+            margin-left: 0;
+        }
+
+        @include maxw(1360px) {
+            margin-right: -0px;
+            margin-left: 0;
+        }
+
+        @include maxw($mobileBreakpoint) {
+            padding-left: toVwMobile(36);
+            padding-right: toVwMobile(36);
+        }
+
+
+
+    }
+}
+
+header.main-header.sticky {
+    background-color: transparent;
+}

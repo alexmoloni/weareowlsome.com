@@ -1,0 +1,51 @@
+body.home {
+    .header-main-footer-wrap {
+        main.main {
+            padding-top: 0;
+            overflow: hidden;
+        }
+    }
+
+    .footer-section {
+        position: relative;
+
+        @include minw($mobileBreakpoint) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+
+        .inner-container  {
+            @include minw($mobileBreakpoint) {
+                top: toVw(-83);
+                position: relative;
+            }
+        }
+
+        .text-wrap {
+
+            @include minw(1600px) {
+                margin-bottom: toVw(50);
+            }
+
+
+            @include maxw($br-xs) {
+                max-width: 305px;
+            }
+
+
+        }
+
+        .footer-menu {
+            @include minw($mobileBreakpoint) {
+                position: absolute;
+                bottom: toVw(80);
+                left: 0;
+                width: 100%;
+                margin-top: -0px;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,68 @@
+body.home {
+    .section-2 {
+        padding-top: 150px;
+        padding-bottom: 130px;
+
+        @include maxw($mobileBreakpoint) {
+            padding-top: toVwMobile(148);
+            padding-bottom: toVwMobile(97);
+        }
+
+        .text-wrap {
+            max-width: toVw(1164);
+            margin: 0 auto;
+            text-align: center;
+
+            @include maxw($mobileBreakpoint) {
+                max-width: none;
+            }
+
+            .text-top {
+                font-size: toVw(80);
+                font-family: $font2;
+                letter-spacing: 0.08px;
+                margin-bottom: 50px;
+                line-height: 1.4;
+
+                @include maxw($mobileBreakpoint) {
+                    font-size: toVwMobile(30);
+                    margin-bottom: 60px;
+                }
+
+                @include maxw(600px) {
+                    margin-bottom: 30px;
+                }
+
+                @include minw(2950px) {
+                    br.desktop-only {
+                        display: none;
+                    }
+                    span.mobile-only {
+                        display: inline !important;
+                    }
+                }
+
+
+                .svg-highlighted-word {
+                    font-weight: 300;
+                    font-style: italic;
+                    font-family: $font3;
+                    letter-spacing: 0.08px;
+                }
+            }
+
+            .text-bottom {
+                font-size: toVw(39);
+                text-transform: uppercase;
+
+                @include maxw($mobileBreakpoint) {
+                    font-size: 28px;
+                }
+
+                @include maxw(600px) {
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+}

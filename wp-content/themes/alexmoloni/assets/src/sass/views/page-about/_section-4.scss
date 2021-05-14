@@ -1,0 +1,89 @@
+body.page-template-page_about {
+    .section-4 {
+        padding-top: toVw(163);
+        padding-bottom: toVw(163);
+
+        @include maxw($mobileBreakpoint) {
+            padding-top: toVwMobile(87);
+            padding-bottom: toVwMobile(82);
+        }
+
+        .heading {
+            margin-bottom: toVw(185);
+            text-align: center;
+
+            @include maxw($mobileBreakpoint) {
+                margin-bottom: toVwMobile(64);
+            }
+        }
+
+        .categories-container {
+            width: toVw(1370);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            @include maxw($mobileBreakpoint) {
+                display: block;
+                @include aboutPageMobileContainer();
+            }
+
+            .category-box {
+                width: toVw(628);
+                margin-bottom: toVw(109);
+
+                @include maxw($mobileBreakpoint) {
+                    width: 100%;
+                    margin-bottom: toVw(106);
+                }
+
+                figure, video {
+
+                    width: 100%;
+                    height: toVw(473);
+                    margin-bottom: toVw(44);
+
+                    @include maxw($mobileBreakpoint) {
+                        height: 50vw;
+                        margin-bottom: 30px;
+                    }
+
+                    @include maxw($br-xs) {
+                        height: 52vw;
+                    }
+
+                    @include maxw(380px) {
+                        height: 61vw;
+                    }
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-position: center;
+                        object-fit: cover;
+                    }
+                }
+
+                video {
+                    object-fit: cover;
+                    object-position: center;
+                }
+
+                .name {
+                    text-align: center;
+                    font-size: toVw(38);
+                    letter-spacing: 1px;
+
+                    @include maxw($mobileBreakpoint) {
+                        font-size: toVw(54, 2);
+                    }
+
+                    @include maxw($br-xs) {
+                        font-size: toVw(54, 4);
+                    }
+                }
+            }
+        }
+    }
+}

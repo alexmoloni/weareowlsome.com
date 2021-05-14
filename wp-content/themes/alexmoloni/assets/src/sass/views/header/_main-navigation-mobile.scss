@@ -1,0 +1,46 @@
+@include maxw($mobileBreakpoint) {
+    header.main-header {
+        .main-navigation {
+            padding-top: 0;
+            padding-bottom: 0;
+            justify-content: center;
+            align-items: center;
+            ul.nav-menu {
+                display: block;
+
+                li.nav-item {
+                    margin-right: 0;
+                    margin-bottom: toVwMobile(37);
+                    text-align: center;
+
+                    @include minw(600px) {
+                        margin-bottom: toVwMobile(20);
+                    }
+
+                    @media (max-height: 500px) {
+                        margin-bottom: toVwMobile(10);
+                    }
+
+                    a {
+                        font-size: toVwMobile(68);
+                        letter-spacing: 0.07px;
+                        font-family: $font2;
+
+                        @include minw(600px) {
+                            font-size: toVwMobile(50);
+                        }
+
+                        @media (max-height: 500px) {
+                            font-size: toVwMobile(20);
+                        }
+
+                    }
+
+                    &:last-child {
+                    }
+                }
+            }
+        }
+    }
+
+}

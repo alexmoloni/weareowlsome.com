@@ -1,0 +1,113 @@
+/*
+ * Web Fonts from colophon-foundry.org
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Colophon Foundry. The fonts are protected under domestic and international trademark and
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2020 Colophon Foundry
+ *
+ * Licenced to Maria Reguła Owlsome Studio Maria Reguła
+ */
+
+
+@font-face {
+    font-family: 'Apercu';
+    src: url('/fonts/apercu-light-pro.eot');
+    src: url('/fonts/apercu-light-pro.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/apercu-light-pro.woff2') format('woff2'),
+    url('/fonts/apercu-light-pro.woff') format('woff'),
+    url('/fonts/apercu-light-pro.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/*
+ * Web Fonts from colophon-foundry.org
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Colophon Foundry. The fonts are protected under domestic and international trademark and
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2020 Colophon Foundry
+ *
+ * Licenced to Maria Reguła Owlsome Studio Maria Reguła
+ */
+
+@font-face {
+    font-family: 'Apercu';
+    src: url('/fonts/apercu-regular-pro.eot');
+    src: url('/fonts/apercu-regular-pro.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/apercu-regular-pro.woff2') format('woff2'),
+    url('/fonts/apercu-regular-pro.woff') format('woff'),
+    url('/fonts/apercu-regular-pro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*
+ * Legal Disclaimer
+ *
+ * These Fonts are licensed only for use on these domains and their subdomains:
+ * weareowlsome.com
+ *
+ * It is illegal to download or use them on other websites.
+ *
+ * While the @font-face statements below may be modified by the client, this
+ * disclaimer may not be removed.
+ *
+ * Lineto.com, 2019
+ */
+
+
+
+@font-face {
+    font-family: "Brown";
+    src: url("/fonts/lineto-brown-regular.eot");
+    src: url("/fonts/lineto-brown-regular.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/lineto-brown-regular.woff2") format("woff2"),
+    url("/fonts/lineto-brown-regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Brown";
+    src: url("/fonts/lineto-brown-light.ttf");
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+/*
+        This font software is the property of Commercial Type.
+
+        You may not modify the font software, use it on another website, or install it on a computer.
+
+        License information is available at http://commercialtype.com/eula
+        For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+        Copyright (C) 2020 Schwartzco Inc.
+        License: 2007-KCEHPI
+*/
+
+
+@font-face {
+    font-family: 'Canela Web';
+    src: url('/fonts/Canela-Light-Web.woff2') format('woff2'),
+    url('/fonts/Canela-Light-Web.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "Saol Display";
+    src: url("/fonts/SaolDisplay-LightItalic.woff2") format('woff2'),
+            url("/fonts/SaolDisplay-LightItalic.eot") format('eot');
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: normal;
+}

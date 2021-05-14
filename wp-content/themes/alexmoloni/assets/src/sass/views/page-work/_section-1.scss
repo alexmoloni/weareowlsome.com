@@ -1,0 +1,41 @@
+body.page-template-page_work {
+    $br1: 500px;
+
+    .section-1 {
+        padding-top: 0;
+        margin-bottom: toVw(150);
+
+        .project-item {
+            @include maxw($mobileBreakpoint) {
+                height: auto;
+            }
+
+            .col-preview-image {
+                @include maxw($mobileBreakpoint) {
+                    height: 40vw;
+                }
+
+                @include maxw($br1) {
+                    height: 80vw;
+                }
+
+            }
+
+            .col-text {
+                @include maxw($br1) {
+                    max-width: none;
+                }
+            }
+
+            .client {
+                font-size: toVw(74);
+
+                @include maxw($br1) {
+                    font-size: toVw(54, 4);
+                }
+            }
+
+
+        }
+    }
+}

@@ -1,0 +1,92 @@
+body.page-template-page_blog {
+    .section-1 {
+        padding-top: 0;
+
+        .inner-container {
+            width: toVw(1531);
+            margin: 0 auto;
+        }
+
+        .posts-wrap {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            @include maxw($mobileBreakpoint) {
+                display: block;
+            }
+
+            > * {
+                width: toVw(740);
+                flex: 0 0 toVw(740);
+
+                @include maxw($mobileBreakpoint) {
+                    width: 100%;
+                }
+            }
+
+            .post-item {
+                margin-bottom: toVw(63);
+                flex: initial;
+                display: block;
+
+
+                @include maxw($mobileBreakpoint) {
+                    margin-bottom: 50px;
+                }
+
+                figure {
+                    width: 100%;
+                    height: toVw(740);
+                    margin-bottom: toVw(52);
+                    @include basicEasing();
+                    @include clipPathBeforeHover();
+
+
+                    @include maxw($mobileBreakpoint) {
+                        margin-bottom: 30px;
+                        height: toVw(1531);;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-position: center;
+                        object-fit: cover;
+                        @include basicEasing();
+                    }
+                }
+
+                .title {
+                    font-size: toVw(54);
+                    @include basicTransition();
+
+                    @include maxw($mobileBreakpoint) {
+                        font-size: toVw(54, 2);
+                    }
+
+                    @include maxw($br-xs) {
+                        font-size: toVw(54, 4);
+                    }
+                }
+            }
+
+            .post-item:hover {
+                text-decoration: none;
+
+                figure {
+                    @include clipPathOnHover();
+
+                    img {
+                        transform: scale(1.05);
+                    }
+                }
+
+                .title {
+                    transform: translateY(-20px);
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.custom-scroll-hover:hover {
+    cursor: url('/images/front-page/scroll.svg'), auto;
+}
+
+.icon.hand {
+    background-image: url('/images/svg/hand.svg');
+}
+
+.icon.cup {
+    background-image: url('/images/svg/cup.svg');
+}
+
+.icon.flower {
+    background-image: url('/images/svg/flower.svg');
+}
+
+.icon.heart {
+    background-image: url('/images/svg/heart.svg');
+}
+
+.icon.sun {
+    background-image: url('/images/svg/sun.svg');
+}
+
+.canela-italic {
+    font-style: italic;
+    font-family: $font2;
+}
+
+.saol-italic {
+    font-style: italic;
+    font-family: $font3;
+    font-weight: 300;
+}
+
+@mixin containerPaddings() {
+    padding-left: toVw(136);
+    padding-right: toVw(136);
+    @include maxw($mobileBreakpoint) {
+        padding-left: toVwMobile(36);
+        padding-right: toVwMobile(36);
+    }
+}
+

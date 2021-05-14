@@ -1,0 +1,49 @@
+@mixin container() {
+  max-width: 1120px;
+  position: relative;
+
+  //useful when having flex containers with negative margins as child of container
+  //overflow: hidden;
+  margin: 0 auto;
+
+  //margin on tablets
+  @include maxw($mobileBreakpoint) {
+  }
+
+  @include maxw(1170px) {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  @include maxw($br-xs) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@mixin with-border-top() {
+  border-top: 1px solid #e7ebed;
+  padding-top: 63px;
+
+  @include maxw($mobileBreakpoint) {
+    padding-top: 44px;
+  }
+}
+
+.container {
+  @include container();
+
+  &.-narrow {
+    max-width: 940px;
+
+    @include maxw(1170px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include maxw(1000px) {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+  }
+}

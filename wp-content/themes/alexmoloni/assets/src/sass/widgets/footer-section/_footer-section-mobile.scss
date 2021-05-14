@@ -1,0 +1,53 @@
+@include maxw($mobileBreakpoint) {
+    .footer-section {
+        padding-top: toVwMobile(126);
+        padding-bottom: toVwMobile(54);
+
+        .owl-icon {
+            margin-bottom: 80px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+
+            @include maxw($br-xs) {
+                margin-bottom: 8vh;
+            }
+        }
+
+        .text-wrap {
+            font-size: toVwMobile(55);
+            margin-bottom: 30px;
+            max-width: none;
+
+            @include maxw($br-xs) {
+                font-size: toVwMobile(68);
+            }
+        }
+
+        .footer-menu {
+            ul {
+                li {
+                    a {
+                        font-size: 25px;
+
+                        @include maxw(350px) {
+                            font-size: 23px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-section.with-email {
+
+        .text-wrap {
+            margin-bottom: toVwMobile(67);
+        }
+
+        .email-wrap {
+            margin-bottom: toVwMobile(45);
+        }
+    }
+}
+

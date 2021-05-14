@@ -1,0 +1,82 @@
+body.page-template-page_contact {
+    .section-2 {
+        background-color: #EDD6C4;
+        padding-top: 0;
+        text-align: center;
+        padding-bottom: 20px;
+        .email, .text-2 {
+            font-size: toVw(53);
+
+            @include maxw($mobileBreakpoint) {
+                font-size: 22px;
+            }
+        }
+
+        .email {
+            display: block;
+            margin-bottom: toVw(64);
+
+            @include maxw($mobileBreakpoint) {
+                margin-bottom: 27px;
+            }
+        }
+
+        .text-2 {
+            margin-bottom: 95px;
+
+            @include maxw($mobileBreakpoint) {
+                margin-bottom: 38px;
+            }
+        }
+
+        .arrow-down.mobile-only {
+            @include maxw($mobileBreakpoint) {
+                text-align: center;
+                margin-bottom: 65px;
+
+                img {
+                    width: 40px;
+                    display: inline-block;
+
+                }
+            }
+        }
+
+        .socials.mobile-only {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 55px;
+
+            a {
+                display: inline-block;
+                font-size: 20px;
+                text-decoration: none;
+                text-transform: uppercase;
+                margin-bottom: 49px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .owl-icon.mobile-only {
+            width: 52px;
+            height: 45px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 38px;
+        }
+
+        .text-3 {
+            font-size: 16px;
+            letter-spacing: 1px;
+
+            @include maxw($mobileBreakpoint) {
+                font-size: 14px;
+            }
+        }
+    }
+}

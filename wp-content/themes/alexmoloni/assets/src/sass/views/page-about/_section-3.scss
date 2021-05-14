@@ -1,0 +1,51 @@
+body.page-template-page_about {
+    .section-3 {
+        padding-top: toVw(163);
+        padding-bottom: toVw(175);
+        background-color: #E7E7E7;
+
+        @include maxw($mobileBreakpoint) {
+            padding-top: toVwMobile(80);
+            padding-bottom: toVwMobile(86);
+        }
+
+        .heading {
+            margin-bottom: toVw(113);
+            text-align: center;
+
+            @include maxw($mobileBreakpoint) {
+                margin-bottom: toVwMobile(50);
+            }
+        }
+
+        .featured-slider {
+
+
+            .slick-slide {
+                margin: 0 toVw(76);
+                display: flex;
+                height: toVw(40);
+                align-items: center;
+
+                @include maxw($mobileBreakpoint) {
+                    margin: 0 25px;
+                    height: toVw(50);
+                }
+
+                @include maxw($br-xs) {
+                    height: toVw(60);
+                }
+
+                img {
+                    height: 100%;
+                }
+
+            }
+
+
+            .slide {
+                text-align: center;
+            }
+        }
+    }
+}

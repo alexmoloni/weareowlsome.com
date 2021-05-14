@@ -1,0 +1,44 @@
+.header-simple-1 {
+
+    .main-logo {
+        .logo {
+            margin: 0 auto;
+            width: toVw(355);
+            height: toVw(158);
+
+            @include maxw($mobileBreakpoint) {
+                max-width: 300px;
+                width: toVwMobile(129);
+                height: toVwMobile(58);
+            }
+        }
+
+    }
+
+}
+
+.header-simple-1.has-text {
+    text-align: center;
+    padding-top: toVw(97);
+    margin-bottom: toVw(105);
+
+
+    .logo-text {
+        display: inline-block;
+        margin: 0 auto;
+        font-size: toVw(95);
+        text-align: left;
+        font-family: $font2;
+        font-weight: 300;
+        line-height: 0.95;
+        text-decoration: none;
+
+        @include maxw($mobileBreakpoint) {
+            font-size: toVw(95, 4);
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

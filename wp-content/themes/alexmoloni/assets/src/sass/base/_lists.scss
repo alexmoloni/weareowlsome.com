@@ -1,0 +1,33 @@
+main section {
+    $li_margin_bottom: 15px;
+    $li_fsz: 15px;
+    $li_padding_left: 15px;
+    ul {
+        font-size: $li_fsz;
+        line-height: 1.5;
+        text-align: left;
+        color: $color1;
+
+        @include maxw($br-sm) {
+            font-size: 14px;
+        }
+
+        li {
+            position: relative;
+            padding-left: $li_padding_left;
+            margin-bottom: $li_margin_bottom;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .icon {
+                position: absolute;
+                left: 0;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,129 @@
+@include maxw($mobileBreakpoint) {
+    body.page-template-page_about {
+        .section-2 {
+            padding-bottom: 50px;
+            .heading-2 {
+                transform: translateX(-40px, -64%);
+                font-size: toVwMobile(45);
+                margin-bottom: 40px;
+            }
+
+            .team {
+                margin-bottom: 60px;
+                .row {
+                    left: 0;
+                    .person {
+                        max-width: 95px;
+
+                        figure {
+                            padding-bottom: 0;
+                            width: toVwMobile(82);
+                            height: toVwMobile(120);
+                        }
+
+                        .name {
+                            font-size: 24px;
+                            left: -12%;
+                        }
+                    }
+
+                    .person.karolina {
+                        .name {
+                            left: -35%;
+                        }
+                    }
+
+                    .person.livia {
+                        margin-right: 22%;
+                    }
+                }
+
+                .row-1 {
+                    @include maxw($br-xs) {
+                        padding-left: 5%;
+                        padding-right: 5%;
+                    }
+                }
+
+                .row-2 {
+                    max-width: 60%;
+                    margin: 0 auto;
+                }
+            }
+
+            .text {
+                margin-bottom: 0;
+                min-width: 0;
+                width: toVwMobile(307);
+                p {
+                    font-size: 20px;
+                    margin-bottom: 20px;
+
+                    @include maxw($br-xs) {
+                        font-size: 19px;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    .icon-spacer {
+                        width: 20px;
+
+                        &.spacer-sun {
+                            width: 20px;
+                        }
+
+                        &.spacer-heart {
+                            margin-left: 4px;
+                        }
+
+                        @include maxw(500px) {
+                            width: 15px;
+                        }
+                    }
+
+                    .icon {
+                        $br-1: 460px;
+                        width: 20px;
+                        height: 20px;
+
+                        @include maxw(500px) {
+                            width: 15px;
+                            height: 18px;
+                        }
+
+                        &.hand {
+                            width: 20px;
+                            bottom: -4px;
+                            height: 18px;
+                        }
+
+                        &.flower {
+                            bottom: -4px;
+                        }
+
+                        &.cup {
+                            width: 20px;
+                            bottom: -7px;
+
+                            @include maxw($br-1) {
+                                bottom: -5px;
+                            }
+                        }
+
+                        &.sun {
+                            width: 19px;
+                            bottom: -5px;
+                        }
+
+                        &.heart {
+                            width: 16px;
+                            bottom: -5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

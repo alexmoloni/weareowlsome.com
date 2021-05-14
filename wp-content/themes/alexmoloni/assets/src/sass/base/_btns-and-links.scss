@@ -1,0 +1,181 @@
+button, a {
+    cursor: pointer;
+}
+
+%btn {
+    transition: all 0.3s;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    font-size: 13px;
+    position: relative;
+    font-weight: bold;
+    text-decoration: none !important;
+    color: $color1;
+
+    @include maxw(500px) {
+        font-size: 12px;
+    }
+}
+
+@mixin btn() {
+    @extend %btn;
+}
+
+%btnWithFillOrBorder {
+    width: rem(168px);
+    height: rem(46px);
+    border-radius: 0;
+}
+
+%btnWithSVGAnimated {
+
+    path {
+        transition: all 0.3s;
+    }
+    &:hover {
+       svg path {
+            fill: $color4;
+        }
+    }
+}
+
+%btnWithIcon {
+    & > .icon {
+        margin-right: 5px;
+    }
+
+    & > .text {
+        text-decoration: underline !important;
+    }
+}
+
+@mixin btnWithIcon() {
+    @extend %btnWithIcon;
+}
+
+.btn-cta-1 {
+    @extend %btn;
+    @extend %btnWithFillOrBorder;
+    @extend %btnWithIcon;
+    background-color: $color2 !important;
+    color: #fff !important;
+
+    &:hover {
+        background-color: $color4 !important;
+        .icon {
+            @include minw($mobileBreakpoint) {
+                @include rotate-center();
+            }
+        }
+    }
+
+
+}
+
+.btn-cta-2 {
+    @extend %btn;
+    @extend %btnWithIcon;
+
+}
+
+.btn-cta-3 {
+    @extend %btn;
+    @extend %btnWithIcon;
+    @extend %btnWithSVGAnimated;
+    color: $color2;
+
+    &:hover {
+        color: $color4;
+    }
+}
+
+.icon.-triangle-down {
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 4px 3.5px 0 3.5px;
+    border-color: $color1 transparent transparent transparent;
+}
+
+a {
+    color: $linksColor;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+@mixin no-style {
+    color: inherit;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+a.no-style {
+    @include no-style();
+}
+
+a.underline-on-hover {
+    //underline on hover - no underline because want custom positioning
+    position: relative;
+
+    &:after {
+        transition: all 0.3s;
+        opacity: 0;
+        display: block;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+    }
+
+    &:hover:after {
+        opacity: 1;
+    }
+}
+
+@mixin btnWoocommerce() {
+    @extend %btn;
+    background-color: $color2!important;
+    color: #fff!important;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 600;
+    display: flex;
+
+    &:hover {
+        background-color: $colorGrey1!important;
+    }
+
+    @include maxw($br-sm) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@mixin bigBtn() {
+    @include btnWoocommerce();
+    height: 50px;
+}
+
+@mixin arrowDownInAfter() {
+    display: flex;
+    align-items: center;
+
+    &:after {
+        @include blockAfterorBefore();
+        @include with-css-background();
+        background-size: 8px 5px;
+        margin-left: 7px;
+        background-image: url(/images/prod/arrows/arrow-down-grey.svg);
+    }
+}

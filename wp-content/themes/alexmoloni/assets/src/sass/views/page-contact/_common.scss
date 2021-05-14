@@ -1,0 +1,14 @@
+body.page-template-page_contact {
+   main.main {
+       padding-top: 0;
+       overflow: hidden;
+   }
+
+    .footer-section {
+        padding-top: 100px;
+
+        @include maxw($mobileBreakpoint) {
+            padding-top: 60px;
+        }
+    }
+}

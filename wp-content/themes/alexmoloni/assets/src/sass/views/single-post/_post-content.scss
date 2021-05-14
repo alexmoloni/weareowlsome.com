@@ -1,0 +1,56 @@
+body.single-post {
+    .content-wrap {
+        font-family: $font1;
+        letter-spacing: 1px;
+        font-size: toVw(32);
+
+        @include maxw($mobileBreakpoint) {
+            font-size: 24px;
+        }
+
+        p {
+            margin-bottom: 1.5em;
+            font-size: toVw(32);
+            max-width: toVw(1041);
+            font-weight: 300;
+
+            @include maxw($mobileBreakpoint) {
+                font-size: 24px;
+                max-width: none;
+            }
+        }
+
+        h2, h3, h4 {
+            margin-top: toVw(70);
+            font-size: toVw(32);
+            font-weight: bold;
+            margin-bottom: toVw(35);
+
+
+            @include maxw($mobileBreakpoint) {
+                font-size: 24px;
+            }
+        }
+
+        figure.wp-block-image {
+
+
+            @include maxw($mobileBreakpoint) {
+
+            }
+
+            img {
+                width: toVw(718);
+                height: auto;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            figcaption {
+                color: #A7A7A7;
+            }
+        }
+
+
+    }
+}

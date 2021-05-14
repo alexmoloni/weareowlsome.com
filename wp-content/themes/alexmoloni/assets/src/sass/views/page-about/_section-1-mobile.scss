@@ -1,0 +1,81 @@
+@include maxw($mobileBreakpoint) {
+
+    body.page-template-page_about {
+        .section-1 {
+            padding-bottom: toVwMobile(60);
+            .inner-wrap {
+                width: 100%;
+
+                > .heading {
+                    margin-top: toVwMobile(100);
+                    margin-bottom: toVwMobile(75);
+                    font-size: toVwMobile(45);
+                }
+            }
+
+
+
+            .row-bottom {
+                display: block;
+                position: relative;
+
+                .mobile-bg {
+                    background-color: $color4;
+                    width: 100%;
+                    height: 200px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+
+                }
+
+                .col-left,
+                .col-right {
+                    @include aboutPageMobileContainer();
+                    z-index: 2;
+                }
+
+                .col-left {
+                    margin-bottom: toVwMobile(62);
+                    height: toVwMobile(387);
+                    @include fitFigurePictureImg();
+                }
+                .col-right {
+                    display: block;
+
+                    .badge {
+                        position: absolute;
+                        top: 20px;
+                        right: 0;
+                        width: 95px;
+                        height: 95px;
+                    }
+
+                    .services-wrap {
+                        top: 0;
+
+                        .heading {
+                            font-size: 20px;
+                            margin-bottom: 18px;
+                        }
+
+                        .icon {
+                            width: 49px;
+                            height: 24px;
+                            margin-bottom: 35px;
+                        }
+
+                        .services-list {
+                            li {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+}

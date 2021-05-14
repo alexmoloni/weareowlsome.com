@@ -1,0 +1,54 @@
+@include maxw($mobileBreakpoint) {
+    body.home {
+        .section-3 {
+            .project-row {
+                display: block;
+                height: auto;
+
+                > * {
+                    width: 100%;
+                }
+
+                .col-preview-image {
+                    width: 100vw;
+                    height: 100vw;
+                }
+
+                .col-text {
+                    padding: 35px 30px;
+
+                    @include maxw($mobileBreakpoint) {
+                        padding-top: toVwMobile(40);
+                        padding-bottom: toVwMobile(96);
+                    }
+
+                    .slogan {
+                        font-size: toVwMobile(45);
+                        margin-bottom: 0;
+                    }
+
+                    .client {
+                        font-size: toVwMobile(49);
+                    }
+
+                    .arrow {
+                        width: toVwMobile(67);
+                        height: toVwMobile(41);
+                    }
+                }
+
+
+            }
+
+            .link {
+                margin: toVwMobile(87) auto;
+                font-size: 28px;
+
+                @include maxw(600px) {
+                    font-size: 19px;
+                }
+            }
+
+        }
+    }
+}

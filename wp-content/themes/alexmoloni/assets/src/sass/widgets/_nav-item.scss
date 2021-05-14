@@ -1,0 +1,12 @@
+.nav-item {
+
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: toVw(39);
+
+        @include maxw($br-md) {
+            font-size: toVw(50);
+        }
+    }
+}

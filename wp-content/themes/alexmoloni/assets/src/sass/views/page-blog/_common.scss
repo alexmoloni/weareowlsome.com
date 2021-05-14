@@ -1,0 +1,14 @@
+
+body.page-template-page_blog {
+    main.main {
+        padding-top: 0;
+    }
+
+
+
+    .footer-section.icon-position-after-text .icon-after-text {
+        @include minw($mobileBreakpoint) {
+            margin-bottom: 0;
+        }
+    }
+}

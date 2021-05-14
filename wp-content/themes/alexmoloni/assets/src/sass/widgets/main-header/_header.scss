@@ -1,0 +1,60 @@
+header.main-header {
+    top: 0;
+    left: auto;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding-top: toVw(61);
+    padding-bottom: 0;
+
+    &.has-shadow {
+        @include headerShadowAndBorder();
+    }
+
+    @include maxw($mobileBreakpoint) {
+        //@include admin-sticky-fix();
+        background-color: #fff;
+        width: 100%;
+        position: relative;
+        z-index: 102;
+    }
+
+    &.sticky {
+        position: fixed;
+        z-index: 300;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+    }
+
+    > .content {
+        @include maxw($mobileBreakpoint) {
+        }
+    }
+
+    .header-inner-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include maxw($mobileBreakpoint) {
+            justify-content: space-between;
+        }
+    }
+
+    .main-logo {
+        margin-right: 50px;
+
+        @include maxw($mobileBreakpoint) {
+            margin-right: 0;
+        }
+
+    }
+
+}
+
+
+
+
+
+

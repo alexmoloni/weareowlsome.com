@@ -1,0 +1,66 @@
+%headings {
+
+}
+
+%subheadings {
+
+
+}
+
+.heading-1 {
+    font-style: normal;
+    margin-bottom: 29px;
+    font-size: toVw(146);
+    font-weight: 300;
+    font-stretch: normal;
+    line-height: 1.18;
+    font-family: $font2;
+    letter-spacing: 0.15px;
+    text-align: center;
+
+    @include maxw($br-md) {
+        font-size: toVw(180);
+    }
+
+    @include maxw($mobileBreakpoint) {
+        font-size: toVwMobile(68);
+    }
+
+    @include maxw($br-xs) {
+        font-size: toVwMobile(68, 2);
+    }
+
+}
+
+.heading-2 {
+
+    color: $color1;
+    font-size: toVw(168);
+    font-weight: 300;
+    letter-spacing: 0.17px;
+    font-family: $font2;
+
+
+    @include maxw($mobileBreakpoint) {
+        font-size: 75px;
+    }
+}
+
+
+.heading-3 {
+    color: $color1;
+    font-family: $font2;
+    font-size: toVw(80);
+    font-weight: 300;
+    letter-spacing: 0.08px;
+
+    @include maxw($mobileBreakpoint) {
+        font-size: toVwMobile(45);
+    }
+
+}
+
+body {
+    font-family: $textFont;
+}
+

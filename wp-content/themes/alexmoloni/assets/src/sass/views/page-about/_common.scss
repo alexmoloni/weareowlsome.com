@@ -1,0 +1,40 @@
+body.page-template-page_about {
+    main.main {
+        padding-top: 0;
+        overflow: hidden;
+    }
+
+    .footer-section {
+        background-color: #D6E0DE;
+
+        .text-wrap {
+            font-size: toVw(129);
+            @include minw($mobileBreakpoint) {
+                margin-bottom: 0;
+            }
+
+            @include maxw($br-md) {
+                font-size: toVw(160);
+            }
+            @include maxw($mobileBreakpoint) {
+                margin-bottom: toVw(185);
+                font-size: toVwMobile(52);
+            }
+        }
+
+        .email-wrap {
+            @include minw($mobileBreakpoint ) {
+                display: none;
+            }
+        }
+    }
+}
+
+@mixin aboutPageMobileContainer() {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 257px;
+    width: 65vw;
+    max-width: 400px;
+    position: relative;
+}

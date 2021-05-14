@@ -1,0 +1,83 @@
+body.page-template-page_about {
+    .section-1 {
+        background-color: $color4;
+        padding-top: toVw(330);
+        padding-bottom: toVw(370);
+
+        .inner-wrap {
+            width: toVw(1224);
+            margin: 0 auto;
+        }
+
+        .heading-1 {
+            margin-top: 0;
+            margin-bottom: toVw(148);
+            text-align: center;
+            font-size: toVw(120);
+            margin-left: 0;
+            margin-right: 0;
+            @include maxw($mobileBreakpoint) {
+                @include containerPaddings();
+            }
+        }
+
+        .row-bottom {
+            display: flex;
+
+            .col-left {
+                flex: 0 0 toVw(577);
+                width: toVw(577);
+                height: toVw(866);
+                margin-right: toVw(160);
+            }
+
+            .col-right {
+                flex: 1 1 auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .badge {
+                    align-self: flex-end;
+                    position: relative;
+                    right: 20px;
+                    width: toVw(211);
+                    height: toVw(211);
+
+                    @include fitFigurePictureImg();
+                }
+
+                .services-wrap {
+                    align-self: flex-start;
+                    position: relative;
+                    top: 40px;
+
+                    .icon {
+                        width: toVw(93);
+                        height: toVw(45);
+                        margin-bottom: toVw(53);
+                    }
+
+                    .heading {
+                        text-transform: uppercase;
+                        font-size: toVw(38);
+                        margin-bottom: toVw(46);
+                    }
+
+                    .services-list {
+                        font-family: $font1;
+                        letter-spacing: 1px;
+
+                        li {
+                            @include resetList();
+                            font-size: toVw(38);
+                            margin-bottom: 7px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+}

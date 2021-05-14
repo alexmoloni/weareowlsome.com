@@ -1,0 +1,57 @@
+@mixin container() {
+    max-width: 1800px;
+    position: relative;
+    margin: 0 auto;
+
+    @include maxw(1860px) {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    //margin on tablets
+    @include maxw(1600px) {
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+
+    @include maxw(1360px) {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    @include maxw($br-xs) {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+.container {
+    @include container();
+}
+
+.container-narrow {
+    max-width: 1600px;
+    position: relative;
+    margin: 0 auto;
+
+    @include maxw(1660px) {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    //margin on tablets
+    @include maxw(1600px) {
+        max-width: 1120px;
+        margin: 0 auto;
+    }
+
+    @include maxw(1170px) {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    @include maxw($br-xs) {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

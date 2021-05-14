@@ -1,0 +1,12 @@
+body.single-project {
+
+    .section-1 {
+        padding-bottom: 0;
+        padding-top: toVw(330);
+        background: linear-gradient(180deg, #E1DEE9 0%, #E1DEE9 80%, #fff 80%);
+
+        @include maxw($mobileBreakpoint) {
+            padding-top: toVwMobile(120);
+        }
+    }
+}

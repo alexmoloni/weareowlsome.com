@@ -1,0 +1,36 @@
+@include maxw($mobileBreakpoint) {
+    header.main-header {
+        $menu_item_underline_color: $color2;
+        $menu_item_underline_height: 5px;
+
+        .main-navigation {
+            .menu-item {
+
+                margin-right: 0;
+                margin-bottom: 30px;
+                display: inline-block;
+
+                &:after {
+                    display: none;
+                }
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                a {
+                    padding: 9px 22px 9px 0;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+
+}

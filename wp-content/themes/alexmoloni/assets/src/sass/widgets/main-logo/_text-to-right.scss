@@ -1,0 +1,10 @@
+.main-logo.text-to-right {
+    display: flex;
+    align-items: center;
+    .text-to-right {
+        margin-left: 50px;
+        @include maxw($mobileBreakpoint) {
+            margin-left: 15px;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.svg-highlighted-word {
+    position: relative;
+    display: inline-block;
+
+    svg {
+        position: absolute;
+        width: 100%;
+        pointer-events: none;
+        height: auto;
+    }
+}
+
+.svg-highlighted-word.type-under {
+    svg {
+        bottom: 0;
+        left: 0;
+        transform: translateY(50%);
+    }
+}
+
+.svg-highlighted-word[class*=type-around] {
+    svg {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
